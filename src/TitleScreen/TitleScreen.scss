@@ -1,0 +1,51 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
+.titlescreen {
+  display: flex;
+  flex-direction: column;
+  background-color: $brainflix-black;
+  height: 100vh;
+  width: 100%;
+  gap: 4rem;
+
+  @include desktop {
+    padding: 0 15rem;
+  }
+
+  &__title {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+
+    @include tablet {
+      font-size: 5rem;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -8rem;
+  }
+
+  &__button {
+    width: 100%;
+    border: none;
+    background-color: $brainflix-blue;
+    height: 4rem;
+    color: $brainflix-white;
+    font-weight: 600;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: $brainflix-darkBlue;
+      cursor: pointer;
+    }
+  }
+}

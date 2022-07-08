@@ -30,7 +30,8 @@
     padding: 0 15rem;
   }
 
-  &__title {
+  &__title,
+  &__level {
     padding-top: 5rem;
     display: flex;
     justify-content: center;
@@ -40,6 +41,11 @@
     @include tablet {
       font-size: 5rem;
     }
+  }
+
+  &__level {
+    font-size: 3rem;
+    margin: -3rem 0;
   }
 
   &__timer {
@@ -53,7 +59,10 @@
     align-self: center;
     line-height: 5rem;
     color: $brainflix-alabaster;
-    font-size: 3rem;
+    font-size: 2.2rem;
+    margin-bottom: -2rem;
+    border-radius: 4px;
+    padding: 1rem;
   }
 
   &__input,
@@ -61,6 +70,7 @@
     font-size: 1.6rem;
     padding: 1.6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
     width: 100%;
     align-self: center;
     height: 20rem;
@@ -101,6 +111,6 @@
   }
 
   &__char--correct {
-    background-color: lightgreen;
+    background-color: forestgreen;
   }
 }

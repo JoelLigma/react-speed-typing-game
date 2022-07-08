@@ -1,0 +1,19 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
+.game {
+  &__button {
+    width: 100%;
+    border: none;
+    background-color: $brainflix-blue;
+    height: 4rem;
+    color: $brainflix-white;
+    font-weight: 600;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: $brainflix-darkBlue;
+      cursor: pointer;
+    }
+  }
+}
