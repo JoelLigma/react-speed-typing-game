@@ -1,0 +1,106 @@
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background-color: $brainflix-black;
+  padding: 0 1.6rem 1.6rem;
+
+  @include tablet {
+    padding: 0 3.6rem;
+  }
+
+  @include desktop {
+    padding: 0 calc((100vw - 1120px) / 2);
+  }
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  background-color: $brainflix-black;
+  height: 100vh;
+  width: 100%;
+  gap: 4rem;
+
+  @include desktop {
+    padding: 0 15rem;
+  }
+
+  &__title {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+
+    @include tablet {
+      font-size: 5rem;
+    }
+  }
+
+  &__timer {
+    color: yellow;
+    font-size: 12rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &__text {
+    align-self: center;
+    line-height: 5rem;
+    color: $brainflix-alabaster;
+    font-size: 3rem;
+  }
+
+  &__input,
+  &__output {
+    font-size: 1.6rem;
+    padding: 1.6rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    align-self: center;
+    height: 20rem;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+
+    &--won {
+      background-color: lightgreen;
+    }
+
+    &--lost {
+      background-color: lightcoral;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: -1.6rem;
+  }
+
+  &__stats {
+    font-size: 1.8rem;
+    color: $brainflix-blue;
+    align-self: center;
+  }
+
+  &__streak {
+    font-size: 1.8rem;
+    color: yellow;
+    align-self: center;
+  }
+
+  &__char--incorrect {
+    background-color: lightcoral;
+  }
+
+  &__char--correct {
+    background-color: lightgreen;
+  }
+}
