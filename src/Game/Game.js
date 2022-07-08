@@ -37,8 +37,6 @@ const Game = (props) => {
    * @returns
    */
   const getSentence = () => {
-    setSentence("test");
-    return;
     axios
       .get("https://api.quotable.io/random")
       .then((response) => {
